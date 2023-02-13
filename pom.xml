@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -16,56 +15,13 @@
 
 	<properties>
 		<java.version>1.8</java.version>
-	</properties>
+	
+ 
 
-	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter</artifactId>
-		</dependency>
+ <versions.java-code-security-toolkit>0.0.2</versions.java-code-security-toolkit>
+</properties>
 
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
-		<dependency>
-			<groupId>org.postgresql</groupId>
-			<artifactId>postgresql</artifactId>
-			<version>42.2.5</version>
-		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/org.jsoup/jsoup -->
-		<dependency>
-		    <groupId>org.jsoup</groupId>
-		    <artifactId>jsoup</artifactId>
-		    <version>1.8.3</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-		    <groupId>io.jsonwebtoken</groupId>
-		    <artifactId>jjwt-api</artifactId>
-		    <version>0.10.5</version>
-		</dependency>
-		<dependency>
-		    <groupId>io.jsonwebtoken</groupId>
-		    <artifactId>jjwt-impl</artifactId>
-		    <version>0.10.5</version>
-		    <scope>runtime</scope>
-		</dependency>
-		<dependency>
-		    <groupId>io.jsonwebtoken</groupId>
-		    <artifactId>jjwt-jackson</artifactId>
-		    <version>0.10.5</version>
-		    <scope>runtime</scope>
-		</dependency>
-	</dependencies>
+	
 
 	<build>
 		<plugins>
@@ -76,4 +32,63 @@
 		</plugins>
 	</build>
 
+
+<dependencyManagement>
+  <dependencies>
+    <dependency>
+      <groupId>io.github.pixee</groupId>
+      <artifactId>java-code-security-toolkit</artifactId>
+      <version>${versions.java-code-security-toolkit}</version>
+    </dependency>
+  </dependencies>
+</dependencyManagement>
+
+ <dependencies> 
+    <dependency> 
+      <groupId>org.springframework.boot</groupId>  
+      <artifactId>spring-boot-starter</artifactId> 
+    </dependency>  
+    <dependency> 
+      <groupId>org.springframework.boot</groupId>  
+      <artifactId>spring-boot-starter-web</artifactId> 
+    </dependency>  
+    <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->  
+    <dependency> 
+      <groupId>org.postgresql</groupId>  
+      <artifactId>postgresql</artifactId>  
+      <version>42.2.5</version> 
+    </dependency>  
+    <!-- https://mvnrepository.com/artifact/org.jsoup/jsoup -->  
+    <dependency> 
+      <groupId>org.jsoup</groupId>  
+      <artifactId>jsoup</artifactId>  
+      <version>1.8.3</version> 
+    </dependency>  
+    <dependency> 
+      <groupId>org.springframework.boot</groupId>  
+      <artifactId>spring-boot-starter-test</artifactId>  
+      <scope>test</scope> 
+    </dependency>  
+    <dependency> 
+      <groupId>io.jsonwebtoken</groupId>  
+      <artifactId>jjwt-api</artifactId>  
+      <version>0.10.5</version> 
+    </dependency>  
+    <dependency> 
+      <groupId>io.jsonwebtoken</groupId>  
+      <artifactId>jjwt-impl</artifactId>  
+      <version>0.10.5</version>  
+      <scope>runtime</scope> 
+    </dependency>  
+    <dependency> 
+      <groupId>io.jsonwebtoken</groupId>  
+      <artifactId>jjwt-jackson</artifactId>  
+      <version>0.10.5</version>  
+      <scope>runtime</scope> 
+    </dependency>  
+    <dependency>
+      <groupId>io.github.pixee</groupId>
+      <artifactId>java-code-security-toolkit</artifactId>
+    </dependency>
+  </dependencies>
 </project>
